@@ -16,7 +16,7 @@ The python program in this project will read the corresponding tally website gen
 2. Clone this project
 
     ```
-    git clone git@github.com:hobbymusician/vmix-tally-pi.git
+    git clone https://github.com/hobbymusician/vmix-tally-pi.git
     ```
 
 3. Start the python program using following parameters after giving the camera input a unique name in vMix
