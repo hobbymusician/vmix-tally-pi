@@ -20,6 +20,7 @@ The python program in this project will read the corresponding tally website gen
     ```
 2. Install pycurl
     ```
+    cd
     git clone https://github.com/pycurl/pycurl.git
     cd pycurl
     python setup.py install
@@ -28,6 +29,7 @@ The python program in this project will read the corresponding tally website gen
 4. Clone this project
 
     ```
+    cd
     git clone https://github.com/hobbymusician/vmix-tally-pi.git
     ```
 
