@@ -34,7 +34,7 @@ The python program in this project will read the corresponding tally website gen
     ```
     If the port is omitted, it defaults to 8088. Press Ctrl + C at any time to exit.
 
-To start the phyhon script when the Raspberry Pi is starting up, you may add it to rc.local:
+To start the phyhon script automatically when the Raspberry Pi is starting up, you may add it to rc.local:
 ```
 sudo nano /etc/rc.local
 ```
