@@ -56,7 +56,7 @@ To start the phyhon script automatically when the Raspberry Pi is starting up, y
 ```
 sudo nano /etc/rc.local
 ```
-Add the following line to rc.local just before the final "exit 0" (eventually modify the path if you were using a different one) and save the file using ^O (Crtl-O):
+Add the following line to rc.local just before the final "exit 0" (eventually modify the path if you were using a different one) and save the file using ^O (Ctrl-O):
 ```
 /home/pi/vmix-tally-pi/vmix-tally-pi/tally.py "Camera 1" 192.168.1.1
 ```
