@@ -28,11 +28,13 @@ The python program in this project will read the corresponding tally website gen
     ```
     tally.py <camera input name> <ip address of vMix computer> [<port>] 
     ```
+    If the port is omitted, it defaults to 8088.
+    
     E.g. type the following to connect to the vMix PC IP address 192.168.1.1 to generate the tally light for the camera named "Camera1":
     ```
     ./tally.py Camera1 192.168.1.1
     ```
-    If the port is omitted, it defaults to 8088. Press Ctrl + C at any time to exit.
+    Press Ctrl + C at any time to exit.
 
 To start the phyhon script automatically when the Raspberry Pi is starting up, you may add it to rc.local:
 ```
