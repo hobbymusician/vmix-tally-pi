@@ -46,14 +46,18 @@ The python program in this project will read the corresponding tally website gen
     ```
     ./tally.py "Camera 1" 192.168.1.1
     ```
+    If you would use port 12345 isntead of 8088, you would type
+    ```
+    ./tally.py "Camera 1" 192.168.1.1 12345
+    ```
     Press Ctrl + C at any time to exit.
 
 To start the phyhon script automatically when the Raspberry Pi is starting up, you may add it to rc.local:
 ```
 sudo nano /etc/rc.local
 ```
-Add the following line to rc.local (eventually modify the path if you were using a different one):
+Add the following line to rc.local just before the final "exit 0" (eventually modify the path if you were using a different one) and save the file using ^O (Crtl-O):
 ```
-/etc/home/vmix-tally-pi/tally.py 192.168.1.1 8088 Camera1
+/home/pi/vmix-tally-pi/vmix-tally-pi/tally.py "Camera 1" 192.168.1.1
 ```
 That's it!
