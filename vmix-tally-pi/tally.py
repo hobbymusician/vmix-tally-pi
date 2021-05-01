@@ -135,7 +135,7 @@ unicornhatmini = UnicornHATMini()
 rotation = 0
 unicornhatmini.set_rotation(rotation)
 display_width, display_height = unicornhatmini.get_shape()
-font = ImageFont.truetype("MiniFont.ttf", 8)
+font = ImageFont.truetype("/home/pi/vmix-tally-pi/vmix-tally-pi/MiniFont.ttf", 8)
 
 # Initial state within the infinite loop
 state=tallyState.SEARCHING_CAM
