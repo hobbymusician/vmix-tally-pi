@@ -19,16 +19,20 @@ The python program in this project will read the corresponding tally website gen
     git clone https://github.com/hobbymusician/vmix-tally-pi.git
     ```
 
-3. Start the python program using following parameters after giving the camera input a unique name in vMix
-
+3. Make the python script executable
+   ```
+    cd vmix-tally-pi/vmix-tally-pi/
+    chmod 755 tally.py
     ```
-    cd vmix-tally-pi
-    ./tally.py <IP address of vMix computer> <port> <camera name>
-	# e.g. 
-	# ./tally.py 192.168.1.1 8088 Camera1
-    
+4. The usage of the script is
     ```
-    Press Ctrl + C at any time to exit.
+    tally.py <camera input name> <ip address of vMix computer> [<port>] 
+    ```
+    E.g. type the following to connect to the vMix PC IP address 192.168.1.1 to generate the tally light for the camera named "Camera1":
+    ```
+    ./tally.py Camera1 192.168.1.1
+    ```
+    If the port is omitted, it defaults to 8088. Press Ctrl + C at any time to exit.
 
 To start the phyhon script when the Raspberry Pi is starting up, you may add it to rc.local:
 ```
