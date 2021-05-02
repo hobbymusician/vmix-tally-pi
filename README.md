@@ -24,12 +24,6 @@ The python program in this project will read the corresponding tally website gen
     ```
     pip install pycurl
     ```
-    ```
-    cd
-    git clone https://github.com/pycurl/pycurl.git
-    cd pycurl
-    python setup.py install
-    ```
     If the above installation procedure should not work, there might be an updated installation procedure [here](http://pycurl.io/docs/latest/install.html#install)
 4. Clone this project
 
