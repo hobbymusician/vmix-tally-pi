@@ -1,7 +1,7 @@
 # Tally lights for vMix
 
 Python program implementing tally lights for vMix with Raspberry Pi Zero and PIMORONI Unicorn Hat Mini
-<p align="center"><img src="https://github.com/hobbymusician/vmix-tally-pi/TALLYPI.jpg" width="240"></p>
+<p align="center"><img src="https://github.com/hobbymusician/vmix-tally-pi/blob/main/TALLYPI.jpg" width="400"></p>
 
 # Before You Start
 
