@@ -16,8 +16,8 @@ The python program in this project will read the corresponding tally website gen
     ```
     sudo apt-get update
     sudo apt-get upgrade
-    sudo apt-get install python-pip
-    sudo apt-get install git
+    sudo apt install python-pip
+    sudo apt install git
     sudo apt install libcurl4-openssl-dev libssl-dev
     ```
 3. Install some dependencies for the PIMORONI stuff which are not avaliable on a Raspberry Pi OS Lite
