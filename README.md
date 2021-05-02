@@ -22,6 +22,9 @@ The python program in this project will read the corresponding tally website gen
     ```
 2. Install pycurl
     ```
+    pip install pycurl
+    ```
+    ```
     cd
     git clone https://github.com/pycurl/pycurl.git
     cd pycurl
