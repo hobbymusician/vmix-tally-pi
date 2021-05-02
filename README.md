@@ -20,24 +20,27 @@ The python program in this project will read the corresponding tally website gen
     sudo apt-get install git
     sudo apt install libcurl4-openssl-dev libssl-dev
     ```
-2. Install pycurl
+3. Install some dependencies for the PIMORONI stuff which are not avaliable on a Raspberry Pi OS Lite
+    ```
+    sudo apt-get install python-pil
+    ```
+4. Install pycurl
     ```
     pip install pycurl
     ```
     If the above installation procedure should not work, there might be an updated installation procedure [here](http://pycurl.io/docs/latest/install.html#install)
-4. Clone this project
+5. Clone this project
 
     ```
     cd
     git clone https://github.com/hobbymusician/vmix-tally-pi.git
     ```
-
-3. Make the python script executable
+6. Make the python script executable
    ```
     cd vmix-tally-pi/vmix-tally-pi/
     chmod 755 tally.py
     ```
-4. The usage of the script is
+    The usage of the script is
     ```
     tally.py <camera input name> <ip address of vMix computer> [<port>] 
     ```
