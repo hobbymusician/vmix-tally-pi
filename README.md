@@ -65,3 +65,8 @@ Add the following line to rc.local just before the final "exit 0" (eventually mo
 /home/pi/vmix-tally-pi/vmix-tally-pi/tally.py "Camera 1" 192.168.1.1
 ```
 That's it!
+After a
+```
+sudo reboot
+```
+the Raspberry Pi shoult automatically start the tally light (initially, there might be an error message saying that it could not connect, but as soon as the vMix PC is found, the tally light should light up with the colour shown in vMix.
