@@ -62,7 +62,7 @@ sudo nano /etc/rc.local
 ```
 Add the following line to rc.local just before the final "exit 0" (eventually modify the path if you were using a different one) and save the file using ^O (Ctrl-O):
 ```
-sudo -H -u pi /home/pi/vmix-tally-pi/vmix-tally-pi/tally.py "Camera 1" 192.168.1.1
+sudo -H -u pi /home/pi/vmix-tally-pi/vmix-tally-pi/tally.py "Camera 1" 192.168.1.1 &
 ```
 That's it!
 After a
