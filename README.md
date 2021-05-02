@@ -22,7 +22,7 @@ The python program in this project will read the corresponding tally website gen
     ```
 3. Install some dependencies for the PIMORONI stuff which are not avaliable on a Raspberry Pi OS Lite
     ```
-    sudo apt-get install python-pil
+    sudo apt install python-pil
     ```
 4. Install pycurl
     ```
