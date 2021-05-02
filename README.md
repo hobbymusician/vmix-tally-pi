@@ -69,4 +69,4 @@ After a
 ```
 sudo reboot
 ```
-the Raspberry Pi shoult automatically start the tally light (initially, there might be an error message saying that it could not connect, but as soon as the vMix PC is found, the tally light should light up with the colour shown in vMix.
+the Raspberry Pi should automatically start the tally light (initially, there might be an error message saying that it could not connect, but as soon as the vMix PC is found, the tally light should light up with the colour shown in vMix and change its color according to the currently active camera.
