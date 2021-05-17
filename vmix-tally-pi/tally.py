@@ -1,4 +1,5 @@
 #!/usr/bin/env python2
+from __future__ import print_function
 import time
 import sys
 from enum import Enum
@@ -13,14 +14,17 @@ from io import BytesIO
 class tallyState(Enum):
 	SEARCHING_CAM = 1
 	CAM_FOUND = 2
-	
+
+def eprint(*args, **kwargs):
+	print(*args, file=sys.stderr, **kwargs)
+
 def displayError(text):
 	unicornhatmini.set_brightness(0.1)
 	hue = 1.0
 	r, g, b = [255, 255, 255]
 	unicornhatmini.set_all(0, 0, 0)
 	unicornhatmini.show()
-	
+
 	text_width, text_height = font.getsize(text)
 	image = Image.new('P', (text_width + display_width + display_width, display_height), 0)
 	draw = ImageDraw.Draw(image)
@@ -56,9 +60,9 @@ def searchCam():
 		crl.close()
 	except pycurl.error as exc:
 		errstr="Unable to reach %s (%s)" % (urlstr , exc)
-		print (errstr)
+		eprint (errstr)
 		displayError(errstr)
-		return ""			
+		return ""
 	get_body = b_obj.getvalue()
 	setupstr=get_body.decode('utf8')
 	b_obj.close()
@@ -71,14 +75,14 @@ def searchCam():
 		print ("Trying to fetch tally status from '"+urlstr+"'")
 		return urlstr
 	else:
-		print ("Did not find camera '"+cameraName+"'!")
+		eprint ("Did not find camera '"+cameraName+"'!")
 		displayError("Did not find camera '"+cameraName+"'!")
 		return ""
-	
-	
+
+
 def readColor(urlstr):
 	b_obj=BytesIO()
-	try: 
+	try:
 		crl=pycurl.Curl()
 		crl.setopt(crl.URL, urlstr)
 		crl.setopt(crl.WRITEDATA, b_obj)
@@ -87,8 +91,8 @@ def readColor(urlstr):
 	except pycurl.error as exc:
 		errstr="Unable to reach %s (%s)" % (urlstr , exc)
 		print (errstr)
-		displayError(errstr)		
-		return False	
+		displayError(errstr)
+		return False
 	get_body = b_obj.getvalue()
 	changestr=get_body.decode('utf8')
 	a, colour, b = changestr.split("\"")
@@ -103,7 +107,7 @@ def readColor(urlstr):
 	b_obj.close()
 	return True
 
-	
+
 count=0
 for argument in sys.argv:
 	if (count==1):
@@ -121,7 +125,7 @@ if (count<3 or count >=5):
 remotePort="8088"
 
 
-print("""vMix Tally Light
+eprint("""vMix Tally Light
 ================
 Please make sure that the Web Controller in vMix 
 on the host with IP address '{0:s}' is activated under
@@ -152,4 +156,4 @@ while True:
 		if not readColor(camUrlStr):
 			state=tallyState.SEARCHING_CAM
 	time.sleep(0.2)
-		
+
