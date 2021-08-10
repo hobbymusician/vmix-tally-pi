@@ -12,7 +12,7 @@ The python program in this project will read the corresponding tally website gen
 
 Part list for this project:
 - Raspberry Pi Zero WH running Raspberry Pi OS lite, i.e. including SD card for the OS, power supply and adaptors for keyboard and standard HDMI cable
-- Pimoroni Unicorn Hat Mini
+- [Pimoroni Unicorn Hat Mini](https://shop.pimoroni.com/products/unicorn-hat-mini)
 - Transparent housing for Raspberry Pi Mini which has enough space for the Unicorn Hat Mini (I was using [this](https://www.amazon.de/gp/product/B07DHCC5NY/ref=ppx_od_dt_b_asin_title_s00?ie=UTF8&psc=1) but others might be feasible as well)
 
 # Installation
@@ -53,7 +53,7 @@ Part list for this project:
     ```
     ./tally.py "Camera 1" 192.168.1.1
     ```
-    If you would use port 12345 isntead of 8088, you would type
+    If you would use port 12345 instead of 8088, you would type
     ```
     ./tally.py "Camera 1" 192.168.1.1 12345
     ```
