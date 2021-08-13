@@ -16,7 +16,8 @@ class tallyState(Enum):
 	CAM_FOUND = 2
 
 def eprint(*args, **kwargs):
-	print(*args, file=sys.stderr, **kwargs)
+	if (option=="-v"):
+		print(*args, file=sys.stderr, **kwargs)
 
 def displayError(text):
 	unicornhatmini.set_brightness(0.1)
@@ -107,7 +108,7 @@ def readColor(urlstr):
 	b_obj.close()
 	return True
 
-
+option=""
 count=0
 for argument in sys.argv:
 	if (count==1):
@@ -115,11 +116,17 @@ for argument in sys.argv:
 	if (count==2):
 		ipAddressServer=argument
 	if (count==3):
-		remotePort=argument
+		if (argument=="-v"):
+			option=argument
+		else:
+			remotePort=argument
+	if (count==4):
+		option=argument
 	count=count+1
 
-if (count<3 or count >=5):
-	print("Usage: tally.p ""<Kamera Name>"" <ip_address> [<port>] ")
+if (count<3 or count >=6):
+	print("Usage: tally.p ""<Kamera Name>"" <ip_address> [<port>] [OPTIONS]")
+	print("Options: -v  verbose mode (default: off)")
 	exit()
 
 remotePort="8088"
