@@ -73,7 +73,8 @@ def searchCam():
 	if startpos>0:
 		keystr=setupstr[startpos:endpos]
 		urlstr="http://"+ipAddressServer+":"+remotePort+"/tallyupdate/?key="+keystr
-		print ("Trying to fetch tally status from '"+urlstr+"'")
+		if (option=="-v"):
+			print ("Trying to fetch tally status from '"+urlstr+"'")
 		return urlstr
 	else:
 		eprint ("Did not find camera '"+cameraName+"'!")
@@ -91,7 +92,8 @@ def readColor(urlstr):
 		crl.close()
 	except pycurl.error as exc:
 		errstr="Unable to reach %s (%s)" % (urlstr , exc)
-		print (errstr)
+		if (option=="-v"):
+			print (errstr)
 		displayError(errstr)
 		return False
 	get_body = b_obj.getvalue()
